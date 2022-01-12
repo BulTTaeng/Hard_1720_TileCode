@@ -38,7 +38,12 @@ We found the left-right symmetry tiles, and now subtract the non- left-right sym
 
 The equation is like below.
 
-
+  if(n%2 == 0){
+    dp[n] = dp[n] - ( (dp[n] - (dp[n/2] + dp[(n-2) /2]*2 )) /2 );
+  }
+  else{
+    dp[n] = dp[n] - ( (dp[n] - ( dp[(n-1) / 2] ) ) / 2);
+  }
 
 ## Where can I get more help, if I need it?
 
